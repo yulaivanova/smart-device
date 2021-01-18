@@ -1,0 +1,36 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.logo__text {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  text-decoration: none;
+  color: $white;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29.3px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.logo__subtitle {
+  font-family: "Roboto", "Arial", sans-serif;
+  color: $dark-white;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.logo__image {
+  margin-right: 16px;
+
+  @media (max-width: $mobile-width) {
+    width: 38px;
+    height: 38px;
+  }
+}
