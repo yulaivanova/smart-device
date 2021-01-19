@@ -11,8 +11,6 @@
   margin: 0 auto;
   box-sizing: border-box;
 
-  background-color: $dark-blue;
-
   @media (max-width: $tablet-width) {
     padding-top: 20px;
   }
@@ -23,15 +21,3 @@
     padding-right: 15px;
   }
 }
-
-// .header::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: -253px;
-//   z-index: -10;
-//   background-image: url("../img/header-bg-desktop@1x.jpg");
-//   max-width: 1920px;
-//   height: 950px;
-//   background-repeat: no-repeat;
-// }
