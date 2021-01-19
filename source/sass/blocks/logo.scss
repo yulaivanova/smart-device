@@ -4,6 +4,19 @@
   align-items: flex-end;
 }
 
+.logo--footer {
+  @media (max-width: $mobile-width) {
+    & .logo__text {
+      display: flex;
+    }
+
+    & .logo__image {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}
+
 .logo__text {
   font-family: "RobotoCondensed", "Arial", sans-serif;
   text-decoration: none;
@@ -33,4 +46,8 @@
     width: 38px;
     height: 38px;
   }
+}
+
+.logo__title--footer {
+  color: $logo-color;
 }
