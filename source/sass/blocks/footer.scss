@@ -1,0 +1,225 @@
+.footer__inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+  max-width: 1466px;
+  padding: 65px 27px 55px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    padding: 19px 0 0 0;
+  }
+}
+
+.footer__item {
+  @media (max-width: $tablet-width) {
+    &:first-child {
+      width: 100%;
+      border-bottom: 1px solid rgba(98,105,98,0.2);
+      padding-bottom: 26px;
+      padding-left: 25px;
+      padding-right: 24px;
+
+      @media (max-width: $mobile-width) {
+        padding: 46px 0 54px;
+      }
+    }
+  }
+}
+
+.footer__item--site-nav {
+  @media (max-width: $tablet-width) {
+    padding-left: 27px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px;
+    width: 100%;
+    border-bottom: 1px solid rgba(98,105,98,0.2);
+  }
+}
+
+.footer__item--office{
+  @media (max-width: $tablet-width) {
+    padding-right: 37px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px;
+    width: 100%;
+  }
+}
+
+.footer__item-inner {
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.footer__info-wrapper {
+  border-top: 1px solid rgba(98,105,98,0.2);
+}
+
+.footer__general-information {
+  padding: 14px 27px;
+
+  max-width: 1466px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    padding: 21px 27px 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    padding: 28px 0 5px;
+  }
+}
+
+
+.footer__date {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: inline-block;
+    margin: 0;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 26px 0 31px;
+  }
+}
+
+.footer__social {
+  padding-top: 54px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 0;
+  }
+}
+
+.footer__title {
+  margin: 0;
+  padding-bottom: 29px;
+
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 400;
+  color: $text-color-dark;
+  font-style: 15px;
+  line-height: 16px;
+  
+  @media (max-width: $tablet-width) {
+    padding-top: 38px;
+  }
+
+  @media (max-width: $mobile-width) {
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    padding: 29px 0;
+  }
+}
+
+.footer__phones-list {
+  @include list-reset;
+}
+
+.footer__content {
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.03em;
+  color: $text-color-dark;
+  opacity: 0.5;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 33px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding-bottom: 0;
+  }
+}
+
+.footer__address {
+  margin: 0;
+}
+
+.footer__copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 457px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.footer__text {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $text-color-dark;
+  opacity: 0.5;
+
+  font-size: 13px;
+  margin: 0;
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 21px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer__title:after {
+      content: '';
+      position: absolute;
+      right: 0;
+
+      width:16px;
+      height:16px;
+    
+      background:
+        linear-gradient($light-gray,$light-gray),
+        linear-gradient($light-gray,$light-gray),
+        $white;
+      background-position:center;
+      background-size: 100% 1px,1px 100%;
+      background-repeat:no-repeat;
+  }
+
+  .footer__title--active:after {
+      content: "";
+      background: none;
+      width: 16px;
+      height: 1px;
+      background-color: $light-gray;
+      top: 50%;
+  }
+
+  .footer__title--active {
+    &+.footer__content {
+      padding-bottom: 23px;
+    }
+  }
+}
