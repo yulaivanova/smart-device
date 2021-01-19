@@ -37,6 +37,8 @@
 }
 
 .contacts__button {
+  width: 180px;
+  
   @media (max-width: $tablet-width) {
     display: none;
   }
