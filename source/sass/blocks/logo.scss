@@ -18,7 +18,7 @@
 }
 
 .logo__text {
-  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-family: $RobotoCondensed;
   text-decoration: none;
   color: $white;
   font-weight: 700;
@@ -33,7 +33,7 @@
 }
 
 .logo__subtitle {
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: $Roboto;
   color: $dark-white;
   font-size: 12px;
   line-height: 14px;

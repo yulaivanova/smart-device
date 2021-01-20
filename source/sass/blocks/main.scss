@@ -1,9 +1,15 @@
 .main__inner {
   background-image: url("../img/triangle-bg-desktop.jpg");
   background-repeat: no-repeat;
+  background-position: 100% 20%;
 
   @media (max-width: $tablet-width) {
     background-image: url("../img/triangle.svg");
     background-position: 100% 100px;
   }
+
+  @media (max-width: $mobile-width) {
+    background-position: 51% 76%;
+  }
+
 }
