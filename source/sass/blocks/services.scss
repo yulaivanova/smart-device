@@ -1,0 +1,208 @@
+.services {
+  background-color: $bg-blue;
+  color: $white;
+}
+
+.services__inner {
+  padding: 93px 25px 127px;
+  max-width: 1220px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    padding: 53px 25px 78px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 53px 15px 64px;
+  }
+}
+
+.services__title {
+  font-family: $RobotoCondensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  margin: 0;
+  padding-bottom: 47px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+    padding-right: 90px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+    padding-right: 0;
+    padding-bottom: 37px;
+  }
+}
+
+.services__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.services__item {
+  width: calc(33% - 15px);
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 46px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.services__link {
+  font-family: $RobotoCondensed;
+  font-weight: 400;
+  color: $white;
+  font-size: 20px;
+  line-height: 30px;
+
+  display: inline-block;
+  width: 100%;
+  min-height: 620px;
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  padding: 53px 155px 507px 43px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 256px;
+    padding: 43px 505px 153px 43px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 23px 100px 173px 35px;
+  }
+}
+
+.services__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: $blue;
+  width: 63px;
+  height: 63px;
+}
+
+.services__link::before {
+  content: "";
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+  z-index: 10;
+}
+
+.services__link--production {
+  background-image: url("../img/services-1-desktop@1x.png");
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/services-1-tablet@1x.png");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/services-1-mobile@1x.png");
+  }
+
+  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+    background-image: url("../img/services-1-desktop@2x.png");
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/services-1-tablet@2x.png");
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/services-1-mobile@2x.png");
+    }
+  }
+}
+
+.services__link--mounting {
+  background-image: url("../img/services-2-desktop@1x.png");
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/services-2-tablet@1x.png");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/services-2-mobile@1x.png");
+  }
+
+  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+    background-image: url("../img/services-2-desktop@2x.png");
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/services-2-tablet@2x.png");
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/services-2-mobile@2x.png");
+    }
+  }
+}
+
+.services__link--сomponents {
+  background-image: url("../img/services-3-desktop@1x.png");
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/services-3-tablet@1x.png");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/services-3-mobile@1x.png");
+  }
+
+  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+    background-image: url("../img/services-3-desktop@2x.png");
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/services-3-tablet@2x.png");
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/services-3-mobile@2x.png");
+    }
+  }
+}

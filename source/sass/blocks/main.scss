@@ -3,6 +3,8 @@
   background-repeat: no-repeat;
   background-position: 100% 20%;
 
+  margin-bottom: 110px;
+
   @media (max-width: $tablet-width) {
     background-image: url("../img/triangle.svg");
     background-position: 100% 100px;
