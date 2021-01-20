@@ -1,5 +1,6 @@
 'use strict';
 
+(function () {
 const mobileWidthOnly = 767;
 var acc = document.querySelectorAll('.footer__title');
 
@@ -17,5 +18,5 @@ var acc = document.querySelectorAll('.footer__title');
     });
   });
 
-
+})();
 

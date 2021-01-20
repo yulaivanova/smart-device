@@ -1,0 +1,9 @@
+.main__inner {
+  background-image: url("../img/triangle-bg-desktop.jpg");
+  background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/triangle.svg");
+    background-position: 100% 100px;
+  }
+}
