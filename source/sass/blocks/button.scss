@@ -7,7 +7,7 @@
   border-radius: 5px;
   box-sizing: border-box;
 
-  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-family: $RobotoCondensed;
   font-weight: 700;
   font-size: 14px;
 }
@@ -15,4 +15,9 @@
 .button--white {
   color: $white;
   border-color: $white;
+}
+
+.button--blue {
+  color: $blue;
+  border-color: $blue;
 }
