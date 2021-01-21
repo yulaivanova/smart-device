@@ -52,7 +52,7 @@ gulp.task("refresh", function (done) {
 
 gulp.task('js', function () {
   return gulp.src('source/js/*.js')
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest('build/js/'));
 });

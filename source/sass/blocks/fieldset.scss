@@ -9,6 +9,18 @@
   padding: 0;
 }
 
+.fieldset--popup {
+  & .fieldset__input {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  & .fieldset__textarea {
+    margin-bottom: 30px;
+    height: 82px;
+  }
+}
+
 .fieldset__input {
   width: calc(50% - 15px);
   margin-bottom: 40px;
