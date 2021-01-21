@@ -1,0 +1,35 @@
+.agreement__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.agreement__input+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  position: relative;
+
+  font-size: 14px;
+  line-height: 16px;
+}
+.agreement__input+label::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid $white;
+}
+
+.agreement__input:checked + .agreement__label::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/yes-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

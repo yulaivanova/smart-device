@@ -1,0 +1,29 @@
+.form__button {
+  min-width: 270px;
+  box-sizing: border-box;
+  background-color: transparent;
+
+  @media (max-width: $mobile-width) {
+    min-width: 290px;
+    margin: 0 auto;
+  }
+}
+
+.form__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.form__agreement {
+  margin-left: 70px;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 34px;
+    margin-top: 30px;
+  }
+}
