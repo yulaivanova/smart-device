@@ -6,12 +6,16 @@
 
 
   max-width: 1466px;
-  padding: 65px 27px 55px;
+  padding: 58px 27px 58px;
   margin: 0 auto;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
-    padding: 19px 0 0 0;
+    padding: 13px 0 0 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
   }
 }
 
@@ -20,18 +24,20 @@
     &:first-child {
       width: 100%;
       border-bottom: 1px solid rgba(98, 105, 98, 0.2);
-      padding-bottom: 26px;
+      padding-bottom: 20px;
       padding-left: 25px;
       padding-right: 24px;
 
       @media (max-width: $mobile-width) {
-        padding: 46px 0 54px;
+        padding: 38px 0 50px;
       }
     }
   }
 }
 
 .footer__item--site-nav {
+  padding-right: 15px;
+
   @media (max-width: $tablet-width) {
     padding-left: 27px;
   }
@@ -44,6 +50,8 @@
 }
 
 .footer__item--office {
+  margin-right: 6px;
+
   @media (max-width: $tablet-width) {
     padding-right: 37px;
   }
@@ -54,7 +62,7 @@
   }
 }
 
-.footer__item-inner {
+.footer__item-wrapper {
   @media (max-width: $tablet-width) {
     display: flex;
     flex-direction: row;
@@ -69,10 +77,14 @@
 
 .footer__info-wrapper {
   border-top: 1px solid rgba(98, 105, 98, 0.2);
+
+  @media (max-width: $tablet-width) {
+    margin-top: 3px;
+  }
 }
 
 .footer__general-information {
-  padding: 14px 27px;
+  padding: 15px 27px;
 
   max-width: 1466px;
   margin: 0 auto;
@@ -80,7 +92,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
 
   @media (max-width: $tablet-width) {
     padding: 21px 27px 24px;
@@ -92,28 +103,27 @@
   }
 }
 
-a.footer__text:hover {
-  opacity: 0.3;
-}
-
-
-.footer__date {
+.footer__item-wrapper p {
   display: none;
 
   @media (max-width: $tablet-width) {
-    display: inline-block;
+    display: inline;
     margin: 0;
     font-size: 13px;
     line-height: 24px;
+    letter-spacing: 0.04em;
+    padding-left: 30px;
+    padding-top: 10px;
+    text-transform: uppercase;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 26px 0 31px;
+    padding: 22px 0 31px;
   }
 }
 
 .footer__social {
-  padding-top: 54px;
+  padding-top: 50px;
 
   @media (max-width: $tablet-width) {
     padding-top: 0;
@@ -122,13 +132,16 @@ a.footer__text:hover {
 
 .footer__title {
   margin: 0;
-  padding-bottom: 29px;
+  padding-bottom: 24px;
+  padding-top: 8px;
 
   font-family: $RobotoCondensed;
   font-weight: 400;
   color: $text-color-dark;
-  font-style: 15px;
+  font-size: 15px;
   line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 
   @media (max-width: $tablet-width) {
     padding-top: 38px;
@@ -138,7 +151,7 @@ a.footer__text:hover {
     cursor: pointer;
     transition: 0.4s;
     position: relative;
-    padding: 29px 0;
+    padding: 28px 0 28px;
   }
 }
 
@@ -165,7 +178,7 @@ a.footer__text:hover {
   }
 }
 
-.footer__address {
+.footer__content p {
   margin: 0;
 }
 
@@ -173,25 +186,38 @@ a.footer__text:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 457px;
 
   @media (max-width: $tablet-width) {
     display: none;
   }
 }
 
-.footer__text {
+.footer__developer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 69px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer__copyright p {
   text-transform: uppercase;
   text-decoration: none;
   color: $text-color-dark;
   opacity: 0.5;
 
   font-size: 13px;
-  margin: 0;
+  letter-spacing: 0.04em;
 
-  @media (max-width: $mobile-width) {
-    padding-bottom: 21px;
-  }
+  margin: 0 73px 0 0;
 }
 
 @media (max-width: $mobile-width) {
@@ -221,10 +247,24 @@ a.footer__text:hover {
     top: 50%;
   }
 
+  .footer__title--nojs {
+    & + .footer__content {
+      max-height: 100%;
+    }
+  }
+
   .footer__title--active {
     & + .footer__content {
       padding-bottom: 23px;
+      padding-top: 4px;
+      padding-right: 10px;
     }
+  }
+}
+
+.footer__logo {
+  @media (max-width: $mobile-width) {
+    margin-right: 14px;
   }
 }
 
@@ -234,5 +274,21 @@ a.footer__text:hover {
 
   &:hover {
     opacity: 0.5;
+  }
+}
+
+.footer__developer .footer__link {
+  font-size: 13px;
+  line-height: 24px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  letter-spacing: 0.04em;
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 20px;
+  }
+
+  &:hover {
+    opacity: 0.3;
   }
 }

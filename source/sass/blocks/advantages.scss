@@ -3,14 +3,14 @@
   margin: 0 auto;
   box-sizing: border-box;
 
-  padding: 112px 25px 80px;
+  padding: 112px 25px 73px;
 
   @media (max-width: $tablet-width) {
-    padding: 50px 25px 54px;
+    padding: 54px 25px 26px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 20px 16px 60px 15px;
+    padding: 37px 16px 36px 15px;
   }
 }
 
@@ -35,7 +35,7 @@
 
   margin-right: 30px;
   margin-bottom: 30px;
-  padding: 40px 42px 10px 44px;
+  padding: 36px 42px 10px 44px;
 
   background-color: $white;
 
@@ -47,7 +47,7 @@
     background-color: $blue;
     color: $white;
 
-    & .advantages__title {
+    & h3 {
       color: $white;
     }
 
@@ -58,7 +58,7 @@
 
   @media (max-width: $tablet-width) {
     min-height: 306px;
-    padding: 24px 20px 0 25px;
+    padding: 23px 20px 0 25px;
 
     &:nth-child(4n+3) {
       min-height: 232px;
@@ -72,7 +72,7 @@
       margin-right: 0;
       margin-bottom: 20px;
       min-height: 310px;
-      padding: 25px 0 0 26px;
+      padding: 24px 0 0 24px;
     }
   }
 
@@ -85,7 +85,7 @@
   fill: $blue;
 }
 
-.advantages__title {
+.advantages__item h3 {
   font-family: $RobotoCondensed;
   font-weight: 400;
   font-size: 24px;
@@ -93,21 +93,28 @@
   color: $blue;
 
   margin: 0;
-  padding: 23px 0 15px;
+  padding: 17px 0 11px;
 
   @media (max-width: $tablet-width) {
-    padding: 14px 0 13px;
+    padding: 4px 0 13px;
   }
 
   @media (max-width: $mobile-width) {
     font-size: 20px;
     line-height: 28px;
+    padding: 7px 0;
   }
 }
 
-.advantages__text {
+.advantages__item p {
   font-size: 16px;
   line-height: 21px;
 
   margin: 0;
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 28px;
+    padding-top: 5px;
+    padding-right: 5px;
+  }
 }

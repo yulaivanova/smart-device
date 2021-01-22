@@ -11,7 +11,7 @@
 }
 
 .company__inner {
-  padding-left: 200px;
+  padding-left: 180px;
   position: relative;
 
   @media (max-width: $tablet-width) {
@@ -27,7 +27,7 @@
 .company__inner::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -31px;
   background-image: url("../img/2005@1x.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -57,6 +57,7 @@
   @media (max-width: $tablet-width) {
     height: 361px;
     width: 251px;
+    left: -25px;
     background-image: url("../img/2005-tablet@1x.png");
 
     &.webp {
@@ -69,7 +70,7 @@
   }
 }
 
-.company__title {
+.company__inner h2 {
   font-family: $RobotoCondensed;
   font-size: 36px;
   line-height: 51px;
@@ -78,22 +79,29 @@
   margin: 0;
   padding-bottom: 18px;
 
-  & + .company__text {
+  & + p {
     padding-bottom: 20px;
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 40px;
+    }
   }
 
   @media (max-width: $tablet-width) {
     font-size: 32px;
     line-height: 45px;
+    padding-bottom: 24px;
   }
 
   @media (max-width: $mobile-width) {
     font-size: 28px;
     line-height: 39px;
+
+    padding-bottom: 21px;
   }
 }
 
-.company__text {
+.company__inner p {
   margin: 0;
   line-height: 22px;
 
@@ -108,9 +116,15 @@
   }
 
   @media (max-width: $tablet-width) {
+    padding-bottom: 19px;
+
     & span:last-of-type {
       display: none;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 28px;
   }
 }
 
