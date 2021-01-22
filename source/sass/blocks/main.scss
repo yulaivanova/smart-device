@@ -12,9 +12,11 @@
   @media (max-width: $tablet-width) {
     background-image: url("../img/triangle.svg");
     background-position: 100% 100px;
+    margin-bottom: 74px;
   }
 
   @media (max-width: $mobile-width) {
     background-position: 51% 76%;
+    margin-bottom: 64px;
   }
 }

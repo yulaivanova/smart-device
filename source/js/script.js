@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  const mobileWidthOnly = 767;
+  const MOBILE_WIDTH_ONLY = 767;
   const ESC_KEY = 'Escape';
   const openBtn = document.querySelector('.contacts__button');
   const popupOverlay = document.querySelector('.popup');
@@ -97,7 +97,7 @@
 
   acc.forEach(item => {
     item.addEventListener('click', function () {
-      if (window.innerWidth <= mobileWidthOnly) {
+      if (window.innerWidth <= MOBILE_WIDTH_ONLY) {
         this.classList.toggle('footer__title--active');
         const content = this.nextElementSibling;
         if (content.style.maxHeight) {

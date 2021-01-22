@@ -3,6 +3,10 @@
   box-sizing: border-box;
   background-color: transparent;
 
+  @media (max-width: $tablet-width) {
+    min-width: 280px;
+  }
+
   @media (max-width: $mobile-width) {
     min-width: 290px;
     margin: 0 auto;
@@ -19,11 +23,23 @@
   }
 }
 
+.form__fieldset {
+  margin-right: 15px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+  }
+}
+
 .form__agreement {
-  margin-left: 70px;
+  margin-left: 73px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 76px;
+  }
 
   @media (max-width: $mobile-width) {
     margin-left: 34px;
-    margin-top: 30px;
+    margin-top: 29px;
   }
 }
