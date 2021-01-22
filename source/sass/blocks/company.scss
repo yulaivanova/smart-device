@@ -34,11 +34,23 @@
   width: 220px;
   height: 317px;
 
+  &.webp {
+    background-image: url("../img/2005@1x.webp");
+  }
+
   @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
     background-image: url("../img/2005@2x.png");
 
+    &.webp {
+      background-image: url("../img/2005@2x.webp");
+    }
+
     @media (max-width: $tablet-width) {
       background-image: url("../img/2005-tablet@2x.png");
+
+      &.webp {
+        background-image: url("../img/2005-tablet@2x.webp");
+      }
     }
   }
 
@@ -46,12 +58,15 @@
     height: 361px;
     width: 251px;
     background-image: url("../img/2005-tablet@1x.png");
+
+    &.webp {
+      background-image: url("../img/2005-tablet@1x.webp");
+    }
   }
 
   @media (max-width: $mobile-width) {
-    display:  none;
+    display: none;
   }
-
 }
 
 .company__title {
@@ -63,7 +78,7 @@
   margin: 0;
   padding-bottom: 18px;
 
-  &+.company__text {
+  & + .company__text {
     padding-bottom: 20px;
   }
 
@@ -76,7 +91,6 @@
     font-size: 28px;
     line-height: 39px;
   }
-
 }
 
 .company__text {

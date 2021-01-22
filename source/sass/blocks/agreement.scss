@@ -6,9 +6,13 @@
 
 .agreement__label {
   opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
-.agreement__input+label {
+.agreement__input + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
@@ -20,8 +24,8 @@
   cursor: pointer;
 }
 
-.agreement__input+label::before {
-  content: '';
+.agreement__input + label::before {
+  content: "";
   position: absolute;
   left: -50px;
   top: -2px;

@@ -6,6 +6,7 @@
   const openBtn = document.querySelector('.contacts__button');
   const popupOverlay = document.querySelector('.popup');
   const popupForm = document.querySelector('.popup__form');
+  const questionsForm = document.querySelector('.questions__form');
   const popupToggle = document.querySelector('.popup__toggle');
   const acc = document.querySelectorAll('.footer__title');
   const scrollBtn = document.querySelector('.promo-block__scroll');
@@ -30,10 +31,12 @@
 
   const closePopup = function (event) {
     popupOverlay.classList.remove('popup--opened');
+    document.body.style.overflow = 'scroll';
   };
 
   const openPopup = function () {
     popupOverlay.classList.add('popup--opened');
+    document.body.style.overflow = 'hidden';
 
     if (userName) {
       userName.focus();
@@ -63,13 +66,18 @@
     }
   };
 
-  popupForm.addEventListener('submit', function (evt) {
+  popupForm.addEventListener('submit', function () {
     if (isStorageSupport) {
       localStorage.setItem('userName', userName.value);
       localStorage.setItem('phone', phone.value);
       localStorage.setItem('question', question.value);
     }
     closePopup();
+  });
+
+  questionsForm.addEventListener('submit', function (evt) {
+    questionsForm.reset();
+    evt.preventDefault();
   });
 
   popupToggle.addEventListener('click', function () {
@@ -110,4 +118,3 @@
   }
 
 })();
-

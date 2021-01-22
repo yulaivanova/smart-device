@@ -2,35 +2,45 @@
 
 (function () {
   const mobileWidthOnly = 767;
-  var ESC_KEY = 'Escape';
-  var openBtn = document.querySelector('.contacts__button');
-  var popupOverlay = document.querySelector('.popup');
-  var popupForm = document.querySelector('.popup__form');
-  var popupToggle = document.querySelector('.popup__toggle');
-  var acc = document.querySelectorAll('.footer__title');
-  var formOpened = document.querySelector('.popup--opened');
-
+  const ESC_KEY = 'Escape';
+  const openBtn = document.querySelector('.contacts__button');
+  const popupOverlay = document.querySelector('.popup');
+  const popupForm = document.querySelector('.popup__form');
+  const questionsForm = document.querySelector('.questions__form');
+  const popupToggle = document.querySelector('.popup__toggle');
+  const acc = document.querySelectorAll('.footer__title');
+  const scrollBtn = document.querySelector('.promo-block__scroll');
   const userName = document.querySelector('#name-popup');
   const phone = document.querySelector('#phone-popup');
   const question = document.querySelector('#question-popup');
-
+  const advBlock = document.querySelector('.advantages');
+  const promoBlockBtn = document.querySelector('.promo-block__button');
   let storageName = '';
   let storagePhone = '';
   let storageQuestion = '';
+  let isStorageSupport = true;
 
-  var closePopup = function (event) {
-    popupOverlay.classList.remove('popup--opened');
+  const onScrollBtnClick = function (e) {
+    e.preventDefault();
+
+    advBlock.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   };
 
-  var openPopup = function () {
-    popupOverlay.classList.add('popup--opened');
+  const closePopup = function (event) {
+    popupOverlay.classList.remove('popup--opened');
+    document.body.style.overflow = 'scroll';
+  };
 
-    var fieldsetInputName = popupForm.querySelector('.fieldset__input--name');
-    fieldsetInputName.focus();
+  const openPopup = function () {
+    popupOverlay.classList.add('popup--opened');
+    document.body.style.overflow = 'hidden';
 
     if (userName) {
+      userName.focus();
       userName.value = storageName;
-      console.log(storageName);
     }
 
     if (phone) {
@@ -42,39 +52,33 @@
     }
   };
 
-  try {
-    storageName = localStorage.getItem('userName');
-    storagePhone = localStorage.getItem('phone');
-    storageQuestion = localStorage.getItem('question');
-  } catch (err) {
-    isStorageSupport = false;
-  }
+  const onEscPress = function (evt) {
+    if (evt.key === ESC_KEY) {
+      closePopup();
+    }
+  };
 
-  popupForm.addEventListener('submit', function (evt) {
-    popupForm.reset();
-    console.log(isStorageSupport);
+  const onOverlayClick = function (event) {
+    const target = event.target;
+    if (target.classList.contains('popup--opened')) {
+      closePopup();
+      document.removeEventListener('keydown', onEscPress);
+    }
+  };
+
+  popupForm.addEventListener('submit', function () {
     if (isStorageSupport) {
       localStorage.setItem('userName', userName.value);
       localStorage.setItem('phone', phone.value);
       localStorage.setItem('question', question.value);
     }
     closePopup();
-    evt.preventDefault();
   });
 
-  var onEscPress = function (evt) {
-    if (evt.key === ESC_KEY) {
-      closePopup();
-    }
-  };
-
-  var onOverlayClick = function (event) {
-    var target = event.target;
-    if (target.classList.contains('popup--opened')) {
-      closePopup();
-      document.removeEventListener('keydown', onEscPress);
-    }
-  };
+  questionsForm.addEventListener('submit', function (evt) {
+    questionsForm.reset();
+    evt.preventDefault();
+  });
 
   popupToggle.addEventListener('click', function () {
     closePopup();
@@ -88,11 +92,14 @@
     document.addEventListener('keydown', onEscPress);
   });
 
+  scrollBtn.addEventListener('click', onScrollBtnClick);
+  promoBlockBtn.addEventListener('click', onScrollBtnClick);
+
   acc.forEach(item => {
     item.addEventListener('click', function () {
       if (window.innerWidth <= mobileWidthOnly) {
         this.classList.toggle('footer__title--active');
-        var content = this.nextElementSibling;
+        const content = this.nextElementSibling;
         if (content.style.maxHeight) {
           content.style.maxHeight = null;
         } else {
@@ -102,5 +109,12 @@
     });
   });
 
-})();
+  try {
+    storageName = localStorage.getItem('userName');
+    storagePhone = localStorage.getItem('phone');
+    storageQuestion = localStorage.getItem('question');
+  } catch (err) {
+    isStorageSupport = false;
+  }
 
+})();
