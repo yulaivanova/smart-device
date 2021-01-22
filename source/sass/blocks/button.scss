@@ -1,17 +1,20 @@
 .button {
-  text-decoration: none;
   padding: 14px 0 14px;
-  text-transform: uppercase;
   border: 1px solid;
-  text-align: center;
+  
   border-radius: 5px;
   box-sizing: border-box;
+  cursor: pointer;
 
+  text-align: center;
   font-family: $RobotoCondensed;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+  text-decoration: none;
 
   &:hover {
     opacity: 0.7;

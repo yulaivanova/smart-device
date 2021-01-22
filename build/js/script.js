@@ -5,8 +5,8 @@
   const ESC_KEY = 'Escape';
   const openBtn = document.querySelector('.contacts__button');
   const popupOverlay = document.querySelector('.popup');
-  const popupForm = document.querySelector('.popup__form');
-  const questionsForm = document.querySelector('.questions__form');
+  const popupForm = document.querySelector('.popup__wrapper form');
+  const questionsForm = document.querySelector('.questions__content form');
   const popupToggle = document.querySelector('.popup__toggle');
   const acc = document.querySelectorAll('.footer__title');
   const scrollBtn = document.querySelector('.promo-block__scroll');
@@ -94,6 +94,10 @@
 
   scrollBtn.addEventListener('click', onScrollBtnClick);
   promoBlockBtn.addEventListener('click', onScrollBtnClick);
+
+  acc.forEach(item => {
+    item.classList.remove('footer__title--nojs')
+  });
 
   acc.forEach(item => {
     item.addEventListener('click', function () {

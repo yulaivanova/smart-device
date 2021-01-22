@@ -7,19 +7,7 @@
   justify-content: space-between;
 }
 
-.fieldset--popup {
-  & .fieldset__input {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-
-  & .fieldset__textarea {
-    margin-bottom: 30px;
-    height: 82px;
-  }
-}
-
-.fieldset__input {
+.fieldset input {
   width: calc(50% - 15px);
   margin-bottom: 40px;
   box-sizing: border-box;
@@ -36,13 +24,15 @@
   }
 }
 
-.fieldset__input:hover,
-.fieldset__textarea:hover {
+.fieldset input:hover,
+.fieldset input:focus,
+.fieldset textarea:hover,
+.fieldset textarea:focus {
   box-shadow: 0 0 0 1px #009bde;
 }
 
-.fieldset__textarea,
-.fieldset__input {
+.fieldset textarea,
+.fieldset input {
   background: rgba(255, 255, 255, 0.1);
   border: none;
   line-height: 22px;
@@ -53,7 +43,7 @@
   }
 }
 
-.fieldset__textarea {
+.fieldset textarea {
   width: 100%;
   margin-bottom: 43px;
   padding: 11px 16px;

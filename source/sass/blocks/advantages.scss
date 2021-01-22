@@ -47,7 +47,7 @@
     background-color: $blue;
     color: $white;
 
-    & .advantages__title {
+    & h3 {
       color: $white;
     }
 
@@ -85,7 +85,7 @@
   fill: $blue;
 }
 
-.advantages__title {
+.advantages__item h3 {
   font-family: $RobotoCondensed;
   font-weight: 400;
   font-size: 24px;
@@ -106,7 +106,7 @@
   }
 }
 
-.advantages__text {
+.advantages__item p {
   font-size: 16px;
   line-height: 21px;
 

@@ -70,7 +70,7 @@
   }
 }
 
-.company__title {
+.company__inner h2 {
   font-family: $RobotoCondensed;
   font-size: 36px;
   line-height: 51px;
@@ -79,7 +79,7 @@
   margin: 0;
   padding-bottom: 18px;
 
-  & + .company__text {
+  & + p {
     padding-bottom: 20px;
 
     @media (max-width: $mobile-width) {
@@ -101,7 +101,7 @@
   }
 }
 
-.company__text {
+.company__inner p {
   margin: 0;
   line-height: 22px;
 
