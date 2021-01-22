@@ -5,8 +5,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
 
-  padding: 0;
+.fieldset--popup {
+  & .fieldset__input {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  & .fieldset__textarea {
+    margin-bottom: 30px;
+    height: 82px;
+  }
 }
 
 .fieldset__input {
@@ -22,6 +32,11 @@
   }
 }
 
+.fieldset__input:hover,
+.fieldset__textarea:hover {
+  box-shadow: 0 0 0 1px #009bde;
+}
+
 .fieldset__textarea,
 .fieldset__input {
   background: rgba(255, 255, 255, 0.1);
@@ -29,9 +44,9 @@
   line-height: 22px;
   color: $white;
 
-    &::placeholder { 
+  &::placeholder {
     color: $white;
-  } 
+  }
 }
 
 .fieldset__textarea {

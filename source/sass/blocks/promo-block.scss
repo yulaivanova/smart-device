@@ -27,34 +27,54 @@
 }
 
 .promo-block__inner::before {
-    content: "";
-    position: absolute;
-    top: 173px;
-    right: 0;
-    z-index: -10;
-    background-image: url("../img/schema-desktop@1x.png");
-    
-    width: 705px;
-    height: 515px;
-    background-size: cover;
-    background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  top: 173px;
+  right: 0;
+  z-index: -10;
+  background-image: url("../img/schema-desktop@1x.png");
 
-    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
-      background-image: url("../img/schema-desktop@2x.png");
+  width: 705px;
+  height: 515px;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-      @media (max-width: $tablet-width) {
-        background-image: url("../img/schema-tablet@2x.png");
-      }
+  &.webp {
+    background-image: url("../img/schema-desktop@1x.webp");
+  }
 
-      @media (max-width: $mobile-width) {
-        background-image: url("../img/schema-mobile@2x.png");
+  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+    background-image: url("../img/schema-desktop@2x.png");
+
+    &.webp {
+      background-image: url("../img/schema-desktop@2x.webp");
+    }
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/schema-tablet@2x.png");
+
+      &.webp {
+        background-image: url("../img/schema-tablet@2x.webp");
       }
     }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/schema-mobile@2x.png");
+
+      &.webp {
+        background-image: url("../img/schema-mobile@2x.webp");
+      }
+    }
+  }
 
   @media (max-width: $tablet-width) {
     width: 310px;
     background-image: url("../img/schema-tablet@1x.png");
     top: -50px;
+
+    &.webp {
+      background-image: url("../img/schema-tablet@1x.webp");
+    }
   }
 
   @media (max-width: $mobile-width) {
@@ -62,6 +82,10 @@
     background-size: contain;
     width: 294px;
     top: -59px;
+
+    &.webp {
+      background-image: url("../img/schema-mobile@1x.webp");
+    }
   }
 }
 
@@ -77,15 +101,31 @@
   background-repeat: no-repeat;
   background-color: $dark-blue;
 
+  &.webp {
+    background-image: url("../img/header-bg-desktop@1x.webp");
+  }
+
   @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
     background-image: url("../img/header-bg-desktop@2x.jpg");
 
+    &.webp {
+      background-image: url("../img/header-bg-desktop@2x.webp");
+    }
+
     @media (max-width: $tablet-width) {
       background-image: url("../img/header-bg-tablet@2x.jpg");
+
+      &.webp {
+        background-image: url("../img/header-bg-tablet@2x.webp");
+      }
     }
 
     @media (max-width: $mobile-width) {
       background-image: url("../img/header-bg-mobile@2x.jpg");
+
+      &.webp {
+        background-image: url("../img/header-bg-mobile@2x.webp");
+      }
     }
   }
 
@@ -93,12 +133,20 @@
     background-image: url("../img/header-bg-tablet@1x.jpg");
     height: 692px;
     top: -76px;
+
+    &.webp {
+      background-image: url("../img/header-bg-tablet@1x.webp");
+    }
   }
 
   @media (max-width: $mobile-width) {
     background-image: url("../img/header-bg-mobile@1x.jpg");
     height: 658px;
     top: -59px;
+
+    &.webp {
+      background-image: url("../img/header-bg-mobile@1x.webp");
+    }
   }
 }
 
@@ -150,7 +198,6 @@
     font-size: 16px;
     width: auto;
   }
-  
 }
 
 .promo-block__text::before {

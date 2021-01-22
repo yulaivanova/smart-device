@@ -12,3 +12,12 @@
     flex-direction: column;
   }
 }
+
+.site-nav__link {
+  text-decoration: none;
+  color: $text-color-dark;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

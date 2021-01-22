@@ -156,10 +156,9 @@
             Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
             <p class="company__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и
             комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
-            <span>..</span> 
+            <span>..</span>
             <span>(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ),
             МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
-            
             </p>
             <a href="#" class="company__button button button--blue">Подробнее</a>
           </div>
@@ -191,12 +190,12 @@
           <div class="questions__content">
             <h2 class="questions__title">Остались вопросы? Задайте их нам!</h2>
             <p class="questions__text">Мы проконсультируем Вас бесплатно</p>
-            <form action="#" class="questions__form form" method="POST">
+            <form action="#" class="questions__form form">
               <fieldset class="form__fieldset fieldset">
                 <label class="visually-hidden" for="name">Ваше имя</label>
-                <input class="fieldset__input" type="text" name="name" placeholder="Имя" minlength="10" id="name" required="">
+                <input class="fieldset__input" type="text" name="name" placeholder="Имя" minlength="2" id="name" required="">
                 <label class="visually-hidden" for="phone">Номер телефона</label>
-                <input class="fieldset__input" type="tel" name="phone" placeholder="Телефон" minlength="10" id="phone" size="10" required="">
+                <input class="fieldset__input" type="tel" name="phone" placeholder="Телефон" minlength="16" id="phone" size="10" required="" data-mask="+7(000)000-00-00">
                 <label class="visually-hidden" for="question">Ваш вопрос</label>
                 <textarea class="fieldset__textarea" id="question" rows="6" placeholder="Ваш вопрос" required=""></textarea>
               </fieldset>
@@ -209,6 +208,31 @@
               </div>
             </form>
           </div>
+        </div>
+      </section>
+
+      <section class="popup">
+        <div class="popup__inner">
+          <button class="popup__toggle" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+          <h2 class="popup__title">Закажите звонок</h2>
+          <p class="popup__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <form action="#" class="popup__form form">
+            <fieldset class="form__fieldset fieldset fieldset--popup">
+              <label class="visually-hidden" for="name">Ваше имя</label>
+              <input class="fieldset__input fieldset__input--name" type="text" name="name" placeholder="Имя" minlength="2" id="name-popup" required="">
+              <label class="visually-hidden" for="phone">Номер телефона</label>
+              <input class="fieldset__input" type="tel" name="phone" placeholder="Телефон" minlength="16" id="phone-popup" size="10" data-mask="+7(000)000-00-00" required="">
+              <label class="visually-hidden" for="question">Ваш вопрос</label>
+              <textarea class="fieldset__textarea" id="question-popup" rows="6" placeholder="Ваш вопрос" required=""></textarea>
+            </fieldset>
+            <div class="form__inner">
+              <button class="form__button form__button button button--white" type="submit">Отправить</button>
+              <div class="form__agreement agreement">
+                <input class="agreement__input" type="checkbox" name="agreement-popup" id="agreement-popup" required="">
+                <label class="agreement__label" for="agreement-popup">Я согласен на обработку персональных данных</label>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
 
@@ -235,21 +259,27 @@
               <ul class="social__list">
                 <li class="social__item">
                   <span class="visually-hidden">Ссылка на Facebook</span>
-                  <svg class="social__icon" width="26" height="26">
-                    <use xlink:href="#fb-icon"></use>
-                  </svg>
+                  <a href="#" class="social__link">
+                    <svg class="social__icon" width="26" height="26">
+                      <use xlink:href="#fb-icon"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="social__item">
                   <span class="visually-hidden">Ссылка на Одноклассники</span>
-                  <svg class="contacts__icon" width="26" height="26">
-                    <use xlink:href="#ok-icon"></use>
-                  </svg>
+                  <a href="#" class="social__link">
+                    <svg class="contacts__icon" width="26" height="26">
+                      <use xlink:href="#ok-icon"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="social__item">
                   <span class="visually-hidden">Ссылка на В контакте</span>
-                  <svg class="contacts__icon" width="26" height="26">
-                    <use xlink:href="#vk-icon"></use>
-                  </svg>
+                  <a href="#" class="social__link">
+                    <svg class="contacts__icon" width="26" height="26">
+                      <use xlink:href="#vk-icon"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -259,13 +289,13 @@
           <h2 class="footer__title">Разделы сайта</h2>
           <div class="footer__content">
             <ul class="footer__site-nav site-nav">
-              <li class="site-nav__item">О компании</li>
-              <li class="site-nav__item">Продукты</li>
-              <li class="site-nav__item">Производство печатных плат</li>
-              <li class="site-nav__item">Монтаж печатных плат</li>
-              <li class="site-nav__item">Комплектующие</li>
-              <li class="site-nav__item">Доставка</li>
-              <li class="site-nav__item">Контакты</li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">О компании</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Продукты</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Производство печатных плат</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Монтаж печатных плат</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Комплектующие</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Доставка</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Контакты</a></li>
             </ul>
           </div>
         </div>
@@ -274,9 +304,9 @@
           <div class="footer__content">
             <p class="footer__address">г. Мытищи, Олимпийский проспект, д.10</p>
             <ul class="footer__phones-list">
-              <li class="footer__phone">+7 (495) 589-40-50</li>
-              <li class="footer__phone">+7 (925) 003-87-67</li>
-              <li class="footer__phone">+7 (926) 926-080-79</li>
+              <li class="footer__phone"><a class="footer__link" href="tel:+7(499)000-52-52">+7 (495) 589-40-50</a></li>
+              <li class="footer__phone"><a class="footer__link" href="tel:+7(499)000-52-52">+7 (925) 003-87-67</a></li>
+              <li class="footer__phone"><a class="footer__link" href="tel:+7(499)000-52-52">+7 (926) 926-080-79</a></li>
             </ul>
           </div>
         </div>
@@ -288,11 +318,14 @@
             <p class="footer__text">1999-2018 SD Service Devices</p>
           </div>
           <a href="#" class="footer__text">Условия конфиденциальности</a>
-          <p class="footer__text">Developed by wow studio</p>
+          <a href="#" class="footer__text">Developed by wow studio</a>
         </div>
       </div>
     </footer>
   </div>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/script.min.js"></script>
+
 </body>
 </html>

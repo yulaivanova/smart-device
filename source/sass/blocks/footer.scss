@@ -19,7 +19,7 @@
   @media (max-width: $tablet-width) {
     &:first-child {
       width: 100%;
-      border-bottom: 1px solid rgba(98,105,98,0.2);
+      border-bottom: 1px solid rgba(98, 105, 98, 0.2);
       padding-bottom: 26px;
       padding-left: 25px;
       padding-right: 24px;
@@ -39,11 +39,11 @@
   @media (max-width: $mobile-width) {
     padding: 0 15px;
     width: 100%;
-    border-bottom: 1px solid rgba(98,105,98,0.2);
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
   }
 }
 
-.footer__item--office{
+.footer__item--office {
   @media (max-width: $tablet-width) {
     padding-right: 37px;
   }
@@ -68,7 +68,7 @@
 }
 
 .footer__info-wrapper {
-  border-top: 1px solid rgba(98,105,98,0.2);
+  border-top: 1px solid rgba(98, 105, 98, 0.2);
 }
 
 .footer__general-information {
@@ -90,6 +90,10 @@
     flex-direction: column;
     padding: 28px 0 5px;
   }
+}
+
+a.footer__text:hover {
+  opacity: 0.3;
 }
 
 
@@ -125,7 +129,7 @@
   color: $text-color-dark;
   font-style: 15px;
   line-height: 16px;
-  
+
   @media (max-width: $tablet-width) {
     padding-top: 38px;
   }
@@ -191,35 +195,44 @@
 }
 
 @media (max-width: $mobile-width) {
-  .footer__title:after {
-      content: '';
-      position: absolute;
-      right: 0;
+  .footer__title::after {
+    content: "";
+    position: absolute;
+    right: 0;
 
-      width:16px;
-      height:16px;
-    
-      background:
-        linear-gradient($light-gray,$light-gray),
-        linear-gradient($light-gray,$light-gray),
-        $white;
-      background-position:center;
-      background-size: 100% 1px,1px 100%;
-      background-repeat:no-repeat;
+    width: 16px;
+    height: 16px;
+
+    background:
+      linear-gradient($light-gray, $light-gray),
+      linear-gradient($light-gray, $light-gray),
+      $white;
+    background-position: center;
+    background-size: 100% 1px, 1px 100%;
+    background-repeat: no-repeat;
   }
 
-  .footer__title--active:after {
-      content: "";
-      background: none;
-      width: 16px;
-      height: 1px;
-      background-color: $light-gray;
-      top: 50%;
+  .footer__title--active::after {
+    content: "";
+    background: none;
+    width: 16px;
+    height: 1px;
+    background-color: $light-gray;
+    top: 50%;
   }
 
   .footer__title--active {
-    &+.footer__content {
+    & + .footer__content {
       padding-bottom: 23px;
     }
+  }
+}
+
+.footer__link {
+  text-decoration: none;
+  color: $text-color-dark;
+
+  &:hover {
+    opacity: 0.5;
   }
 }

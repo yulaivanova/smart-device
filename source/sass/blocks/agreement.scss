@@ -4,7 +4,15 @@
   opacity: 0;
 }
 
-.agreement__input+label {
+.agreement__label {
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.agreement__input + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
@@ -12,16 +20,20 @@
 
   font-size: 14px;
   line-height: 16px;
+
+  cursor: pointer;
 }
-.agreement__input+label::before {
-  content: '';
+
+.agreement__input + label::before {
+  content: "";
   position: absolute;
-  left: -35px;
-  top: 0;
+  left: -50px;
+  top: -2px;
   width: 16px;
   height: 16px;
 
   border: 1px solid $white;
+  cursor: pointer;
 }
 
 .agreement__input:checked + .agreement__label::before {
