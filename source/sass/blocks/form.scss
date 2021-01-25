@@ -35,3 +35,48 @@
     margin-top: 29px;
   }
 }
+
+.form h2 {
+  font-family: $RobotoCondensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  margin: 0;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+
+    padding-right: 40px;
+  }
+}
+
+.form p {
+  line-height: 22px;
+  margin: 0;
+  padding-bottom: 51px;
+  padding-top: 5px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 25px;
+    padding-top: 11px;
+  }
+}
+
+.form__fieldset {
+  margin-right: 15px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+  }
+}

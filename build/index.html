@@ -19,15 +19,15 @@
   <div class="wrapper">
     <header class="header">
       <div class="header__logo logo">
-        <a href="index.html" class="logo__img">
+        <a class="logo__img">
           <picture>
             <source media="(max-width: 767px)" srcset="img/logo-mobile.png">
-            <img class="logo__image" src="img/logo-desktop.png" alt="Smart device logo" width="52" height="52">
+            <img src="img/logo-desktop.png" alt="Smart device logo" width="52" height="52">
           </picture>
         </a>
-        <a href="index.html" class="logo__text">
-          <span class="logo__title">Smart Device</span>
-          <span class="logo__subtitle">умные технологии</span>
+        <a class="logo__text">
+          <span>Smart Device</span>
+          <span>умные технологии</span>
         </a>
       </div>
       <div class="header__contacts contacts">
@@ -134,15 +134,15 @@
 
       <section class="questions">
         <div class="questions__inner">
-          <div class="questions__image-wrapper">
+          <div class="questions__image">
             <!-- 1х: 511px; 2x: 1022px -->
-            <img class="questions__img" src="img/airplane@1x.jpg" srcset="img/airplane@2x.png" alt="Airplane" width="511" height="288">
+            <img src="img/airplane@1x.jpg" srcset="img/airplane@2x.png" alt="Airplane" width="511" height="288">
           </div>
-          <div class="questions__content">
+          <div class="questions__content form">
             <h2>Остались вопросы? Задайте их нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
             <form action="#">
-              <fieldset class="questions__fieldset fieldset">
+              <fieldset class="form__fieldset fieldset">
                 <label class="visually-hidden" for="name">Ваше имя</label>
                 <input type="text" name="name" placeholder="Имя" minlength="2" id="name" required="">
                 <label class="visually-hidden" for="phone">Номер телефона</label>
@@ -151,7 +151,7 @@
                 <textarea id="question" rows="6" placeholder="Ваш вопрос" required=""></textarea>
               </fieldset>
               <div class="form__inner">
-                <button class="form__button form__button button button--white" type="submit">Задать вопрос</button>
+                <button class="form__button button button--white" type="submit">Задать вопрос</button>
                 <div class="form__agreement agreement">
                   <input type="checkbox" name="agreement" id="agreement" checked="" required="">
                   <label class="agreement__label" for="agreement">Я согласен на обработку персональных данных</label>
@@ -194,15 +194,15 @@
         <div class="footer__item">
           <div class="footer__item-wrapper">
             <div class="footer__logo logo logo--footer">
-              <a href="index.html" class="logo__img">
+              <a class="logo__img logo__img--footer">
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/logo-mobile.png">
-                  <img class="logo__image" src="img/logo-desktop.png" alt="Smart device logo" width="52" height="52">
+                  <img src="img/logo-desktop.png" alt="Smart device logo" width="52" height="52">
                 </picture>
               </a>
-              <a href="index.html" class="logo__text">
-                <span class="logo__title logo__title--footer">Smart Device</span>
-                <span class="logo__subtitle">умные технологии</span>
+              <a class="logo__text logo__text--footer">
+                <span>Service Device</span>
+                <span>умные технологии</span>
               </a>
             </div>
             <p>1999-2018 SD Service Devices</p>
@@ -219,7 +219,7 @@
                 <li class="social__item">
                   <span class="visually-hidden">Ссылка на Одноклассники</span>
                   <a href="#" class="social__link">
-                    <svg class="contacts__icon" width="27" height="26">
+                    <svg class="social__icon" width="27" height="26">
                       <use xlink:href="#ok-icon"></use>
                     </svg>
                   </a>
@@ -227,7 +227,7 @@
                 <li class="social__item">
                   <span class="visually-hidden">Ссылка на В контакте</span>
                   <a href="#" class="social__link">
-                    <svg class="contacts__icon" width="28" height="26">
+                    <svg class="social__icon" width="28" height="26">
                       <use xlink:href="#vk-icon"></use>
                     </svg>
                   </a>
