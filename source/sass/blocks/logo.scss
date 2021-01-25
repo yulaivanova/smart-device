@@ -34,14 +34,14 @@
   }
 }
 
-.logo__subtitle {
+.logo__text span:last-of-type {
   font-family: $Roboto;
   color: $dark-white;
   font-size: 12px;
   line-height: 14px;
 }
 
-.logo__image {
+.logo__img img {
   margin-right: 16px;
   margin-top: 8px;
 
@@ -51,6 +51,11 @@
   }
 }
 
-.logo__title--footer {
+.logo__img--footer img {
+  width: 52px;
+  height: 52px;
+}
+
+.logo__text--footer span:first-of-type {
   color: $logo-color;
 }
