@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart device</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-medium.woff2" as="font" crossorigin="anonymous">
 </head>
 <body>
   <div style="display: none;">
@@ -20,9 +20,12 @@
     <header class="header">
       <div class="header__logo logo">
         <a class="logo__img">
+          <!-- 1х: 52px; 2x: 104px -->
           <picture>
-            <source media="(max-width: 767px)" srcset="img/logo-mobile.png">
-            <img src="img/logo-desktop.png" alt="Smart device logo" width="52" height="52">
+            <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.webp">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/logo-mobile@1x.webp 1x, img/logo-desktop@2x.png 2x">
+            <source type="image/webp" srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x">
+            <img src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png"alt="Smart device logo" width="52" height="52">
           </picture>
         </a>
         <a class="logo__text">
@@ -33,13 +36,13 @@
       <div class="header__contacts contacts">
         <div class="contacts__list">
           <a class="contacts__item" href="mailto:info@sd.ru">
-            <svg class="contacts__icon contacts__icon--mail" width="19" height="14" viewbox="0,0,19,14">
+            <svg class="contacts__icon contacts__icon--mail" width="19" height="14">
               <use xlink:href="#mail-icon"></use>
             </svg>
             <span>info@sd.ru</span>
           </a>
-          <a class="contacts__item" href="tel:+7(499)000-52-52">
-            <svg class="contacts__icon contacts__icon--phone" width="18" height="18" viewbox="0,0,18,18">
+          <a class="contacts__item" href="tel:+74990005252">
+            <svg class="contacts__icon contacts__icon--phone" width="18" height="18">
               <use xlink:href="#phone-icon"></use>
             </svg>
             <span>+7 (499) 000 52 52</span>
@@ -136,7 +139,10 @@
         <div class="questions__inner">
           <div class="questions__image">
             <!-- 1х: 511px; 2x: 1022px -->
-            <img src="img/airplane@1x.jpg" srcset="img/airplane@2x.png" alt="Airplane" width="511" height="288">
+            <picture>
+              <source type="image/webp" srcset="img/airplane@1x.webp 1x, img/airplane@2x.webp 2x">
+              <img src="img/airplane@1x.jpg" srcset="img/airplane@2x.png" alt="Airplane" width="511" height="288">
+            </picture>
           </div>
           <div class="questions__content form">
             <h2>Остались вопросы? Задайте их нам!</h2>
@@ -170,11 +176,11 @@
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <form action="#">
             <fieldset class="popup__fieldset fieldset">
-              <label class="visually-hidden" for="name">Ваше имя</label>
+              <label class="visually-hidden" for="name-popup">Ваше имя</label>
               <input type="text" name="name" placeholder="Имя" minlength="2" id="name-popup" required>
-              <label class="visually-hidden" for="phone">Номер телефона</label>
+              <label class="visually-hidden" for="phone-popup">Номер телефона</label>
               <input type="tel" name="phone" placeholder="Телефон" minlength="16" id="phone-popup" size="10" data-mask="+7(000)000-00-00" required>
-              <label class="visually-hidden" for="question">Ваш вопрос</label>
+              <label class="visually-hidden" for="question-popup">Ваш вопрос</label>
               <textarea id="question-popup" rows="6" placeholder="Ваш вопрос" required></textarea>
             </fieldset>
             <div class="popup__inner">
@@ -196,9 +202,10 @@
           <div class="footer__item-wrapper">
             <div class="footer__logo logo logo--footer">
               <a class="logo__img logo__img--footer">
+                <!-- 1х: 52px; 2x: 104px -->
                 <picture>
-                  <source media="(max-width: 767px)" srcset="img/logo-mobile.png">
-                  <img src="img/logo-desktop.png" alt="Smart device logo" width="52" height="52">
+                  <source type="image/webp" srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x">
+                  <img src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png" alt="Smart device logo" width="52" height="52">
                 </picture>
               </a>
               <a class="logo__text logo__text--footer">
@@ -256,9 +263,9 @@
           <div class="footer__content">
             <p>г. Мытищи, Олимпийский проспект, д.10</p>
             <ul class="footer__phones-list">
-              <li class="footer__phone"><a class="footer__link" href="tel:+7(499)000-52-52">+7 (495) 589-40-50</a></li>
-              <li class="footer__phone"><a class="footer__link" href="tel:+7(499)000-52-52">+7 (925) 003-87-67</a></li>
-              <li class="footer__phone"><a class="footer__link" href="tel:+7(499)000-52-52">+7 (926) 926-080-79</a></li>
+              <li class="footer__phone"><a class="footer__link" href="tel:+74990005252">+7 (495) 589-40-50</a></li>
+              <li class="footer__phone"><a class="footer__link" href="tel:+74990005252">+7 (925) 003-87-67</a></li>
+              <li class="footer__phone"><a class="footer__link" href="tel:+74990005252">+7 (926) 926-080-79</a></li>
             </ul>
           </div>
         </div>
@@ -277,9 +284,9 @@
       </div>
     </footer>
   </div>
-  <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/jquery.mask.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/vendor.js"></script>
+
+  <script src="js/main.js"></script>
 
 </body>
 </html>
