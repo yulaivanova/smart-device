@@ -33,6 +33,7 @@
 
 .questions__image {
   max-width: 503px;
+  width: 100%;
 
   @media (max-width: $tablet-width) {
     display: none;

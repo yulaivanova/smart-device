@@ -60,6 +60,7 @@
   @media (max-width: $mobile-width) {
     padding: 0 15px;
     width: 100%;
+    margin-right: 0;
   }
 }
 
@@ -230,10 +231,10 @@
     width: 16px;
     height: 16px;
 
-    background:
+    background-image:
       linear-gradient($light-gray, $light-gray),
-      linear-gradient($light-gray, $light-gray),
-      $white;
+      linear-gradient($light-gray, $light-gray);
+    background-color: $white;
     background-position: center;
     background-size: 100% 1px, 1px 100%;
     background-repeat: no-repeat;
@@ -241,7 +242,6 @@
 
   .footer__title--active::after {
     content: "";
-    background: none;
     width: 16px;
     height: 1px;
     background-color: $light-gray;
