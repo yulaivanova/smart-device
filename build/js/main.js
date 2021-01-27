@@ -1,7 +1,9 @@
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
 'use strict';
 
 (function () {
-  
   const ESC_KEY = 'Escape';
   const OPEN_BTN = document.querySelector('.contacts__button');
   const POPUP_OVERLAY = document.querySelector('.popup');
@@ -12,7 +14,7 @@
   const PHONE = document.querySelector('#phone-popup');
   const QUESTION = document.querySelector('#question-popup');
 
-  const closePopup = function (event) {
+  const closePopup = function () {
     POPUP_OVERLAY.classList.remove('popup--opened');
     document.body.style.overflow = 'scroll';
   };
@@ -77,6 +79,9 @@
 
 })();
 
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
 'use strict';
 
 (function () {
@@ -100,7 +105,11 @@
     question: storageQuestion,
   };
 
-}) ();
+})();
+
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
 'use strict';
 
 (function () {
@@ -108,7 +117,7 @@
   const ACC = document.querySelectorAll('.footer__title');
 
   ACC.forEach(item => {
-    item.classList.remove('footer__title--nojs')
+    item.classList.remove('footer__title--nojs');
   });
 
   ACC.forEach(item => {
@@ -126,6 +135,10 @@
   });
 
 })();
+
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
 'use strict';
 
 (function () {
@@ -136,14 +149,14 @@
 
   const moveTo = new MoveTo();
 
-  SCROLL_BTN.addEventListener('click', function(e) {
+  SCROLL_BTN.addEventListener('click', function (e) {
     e.preventDefault();
     moveTo.move(ADV_BLOCK);
   });
 
-  PROMO_BLOCK_BTN.addEventListener('click', function(e) {
+  PROMO_BLOCK_BTN.addEventListener('click', function (e) {
     e.preventDefault();
     moveTo.move(QUESTIONS_BLOCK);
   });
 
-}) ();
+})();

@@ -1,3 +1,6 @@
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
 'use strict';
 
 (function () {
@@ -8,12 +11,12 @@
 
   const moveTo = new MoveTo();
 
-  SCROLL_BTN.addEventListener('click', function(e) {
+  SCROLL_BTN.addEventListener('click', function (e) {
     e.preventDefault();
     moveTo.move(ADV_BLOCK);
   });
 
-  PROMO_BLOCK_BTN.addEventListener('click', function(e) {
+  PROMO_BLOCK_BTN.addEventListener('click', function (e) {
     e.preventDefault();
     moveTo.move(QUESTIONS_BLOCK);
   });

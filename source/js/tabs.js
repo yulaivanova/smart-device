@@ -1,3 +1,6 @@
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
 'use strict';
 
 (function () {
@@ -5,7 +8,7 @@
   const ACC = document.querySelectorAll('.footer__title');
 
   ACC.forEach(item => {
-    item.classList.remove('footer__title--nojs')
+    item.classList.remove('footer__title--nojs');
   });
 
   ACC.forEach(item => {

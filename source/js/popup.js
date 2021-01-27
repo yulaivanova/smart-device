@@ -1,3 +1,6 @@
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
 'use strict';
 
 (function () {
@@ -11,7 +14,7 @@
   const PHONE = document.querySelector('#phone-popup');
   const QUESTION = document.querySelector('#question-popup');
 
-  const closePopup = function (event) {
+  const closePopup = function () {
     POPUP_OVERLAY.classList.remove('popup--opened');
     document.body.style.overflow = 'scroll';
   };
