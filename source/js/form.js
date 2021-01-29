@@ -14,7 +14,5 @@
       localStorage.setItem('phone', PHONE_FORM.value);
       localStorage.setItem('question', QUESTION_FORM.value);
     }
-
-    //QUESTIONS_FORM.reset();
   });
 })();
