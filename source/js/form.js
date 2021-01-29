@@ -8,7 +8,7 @@
   const PHONE_FORM = document.querySelector('#phone');
   const QUESTION_FORM = document.querySelector('#question');
 
-  QUESTIONS_FORM.addEventListener('submit', function (evt) {
+  QUESTIONS_FORM.addEventListener('submit', function () {
     if (window.storage.isSupport) {
       localStorage.setItem('userName', USER_NAME_FORM.value);
       localStorage.setItem('phone', PHONE_FORM.value);
