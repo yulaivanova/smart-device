@@ -11,18 +11,25 @@
     item.classList.remove('footer__title--nojs');
   });
 
-  ACC.forEach(item => {
-    item.addEventListener('click', function () {
-      if (window.innerWidth <= MOBILE_WIDTH_ONLY) {
-        this.classList.toggle('footer__title--active');
-        const content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      }
-    });
-  });
+  const switchVisability = (evt) => {
+    if (window.innerWidth <= MOBILE_WIDTH_ONLY) {
+      const menus = document.querySelectorAll('.footer__title');
+      const menu = evt.target;
+      let isVisible = false;
 
+      isVisible = menu.classList.contains('footer__title--active') ? true : false;
+
+      menus.forEach((item) => {
+        if (item.classList.contains('footer__title--active')) {
+          item.classList.toggle('footer__title--active');
+        }
+      });
+
+      if (!isVisible) {
+        menu.classList.toggle('footer__title--active');
+      }
+    }
+  };
+
+  ACC.forEach((item) => item.addEventListener('click', switchVisability));
 })();

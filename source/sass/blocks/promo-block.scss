@@ -237,22 +237,23 @@
 
   margin-left: 142px;
   padding: 18px 0;
+  margin-bottom: 93px;
 
   @media (max-width: $tablet-width) {
     margin-left: 51px;
+    margin-bottom: 0;
     width: 379px;
   }
 
   @media (max-width: $mobile-width) {
-    width: 100%;
-    margin: 0 auto;
+    width: 290px;
+    margin: 0;
   }
 }
 
 .promo-block__scroll {
   transform: rotate(180deg);
   writing-mode: vertical-rl;
-  padding-bottom: 93px;
   margin-left: 47px;
   text-decoration: none;
   color: $white;

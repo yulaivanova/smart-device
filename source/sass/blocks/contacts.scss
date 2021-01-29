@@ -8,7 +8,9 @@
   margin-right: 51px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  max-width: 700px;
 
   @media (max-width: $tablet-width) {
     margin-right: 0;
@@ -27,8 +29,14 @@
     margin-right: 0;
   }
 
+  &:hover {
+    opacity: 0.5;
+  }
+
   @media (max-width: $tablet-width) {
-    margin-right: 33px;
+    margin-right: 27px;
+    width: 30px;
+    height: 30px;
 
     & span {
       display: none;
@@ -36,7 +44,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-right: 24px;
+    margin-right: 17px;
   }
 }
 
@@ -53,6 +61,7 @@
 
   @media (max-width: $tablet-width) {
     padding-right: 0;
+    padding-left: 4px;
     height: 18px;
     width: 25px;
   }
@@ -63,6 +72,7 @@
 
   @media (max-width: $tablet-width) {
     padding-right: 0;
+    padding-left: 5px;
     height: 24px;
     width: 24px;
   }

@@ -2,19 +2,8 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-}
 
-.logo--footer {
-  @media (max-width: $mobile-width) {
-    & .logo__text {
-      display: flex;
-    }
-
-    & .logo__image {
-      width: 52px;
-      height: 52px;
-    }
-  }
+  width: 202px;
 }
 
 .logo__text {
@@ -49,13 +38,4 @@
     width: 38px;
     height: 38px;
   }
-}
-
-.logo__img--footer img {
-  width: 52px;
-  height: 52px;
-}
-
-.logo__text--footer span:first-of-type {
-  color: $logo-color;
 }

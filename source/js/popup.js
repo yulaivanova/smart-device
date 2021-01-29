@@ -8,7 +8,6 @@
   const OPEN_BTN = document.querySelector('.contacts__button');
   const POPUP_OVERLAY = document.querySelector('.popup');
   const POPUP_FORM = document.querySelector('.popup__wrapper form');
-  const QUESTIONS_FORM = document.querySelector('.questions__content form');
   const POPUP_TOGGLE = document.querySelector('.popup__toggle');
   const USER_NAME = document.querySelector('#name-popup');
   const PHONE = document.querySelector('#phone-popup');
@@ -57,12 +56,8 @@
       localStorage.setItem('phone', PHONE.value);
       localStorage.setItem('question', QUESTION.value);
     }
-    closePopup();
-  });
 
-  QUESTIONS_FORM.addEventListener('submit', function (evt) {
-    QUESTIONS_FORM.reset();
-    evt.preventDefault();
+    closePopup();
   });
 
   POPUP_TOGGLE.addEventListener('click', function () {
@@ -72,7 +67,8 @@
 
   POPUP_OVERLAY.addEventListener('click', onOverlayClick);
 
-  OPEN_BTN.addEventListener('click', function () {
+  OPEN_BTN.addEventListener('click', function (evt) {
+    evt.preventDefault();
     openPopup();
     document.addEventListener('keydown', onEscPress);
   });
