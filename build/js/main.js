@@ -8,7 +8,6 @@
   const OPEN_BTN = document.querySelector('.contacts__button');
   const POPUP_OVERLAY = document.querySelector('.popup');
   const POPUP_FORM = document.querySelector('.popup__wrapper form');
-  const QUESTIONS_FORM = document.querySelector('.questions__content form');
   const POPUP_TOGGLE = document.querySelector('.popup__toggle');
   const USER_NAME = document.querySelector('#name-popup');
   const PHONE = document.querySelector('#phone-popup');
@@ -57,12 +56,8 @@
       localStorage.setItem('phone', PHONE.value);
       localStorage.setItem('question', QUESTION.value);
     }
-    closePopup();
-  });
 
-  QUESTIONS_FORM.addEventListener('submit', function (evt) {
-    QUESTIONS_FORM.reset();
-    evt.preventDefault();
+    closePopup();
   });
 
   POPUP_TOGGLE.addEventListener('click', function () {
@@ -72,13 +67,34 @@
 
   POPUP_OVERLAY.addEventListener('click', onOverlayClick);
 
-  OPEN_BTN.addEventListener('click', function () {
+  OPEN_BTN.addEventListener('click', function (evt) {
+    evt.preventDefault();
     openPopup();
     document.addEventListener('keydown', onEscPress);
   });
 
 })();
 
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
+'use strict';
+(function () {
+  const QUESTIONS_FORM = document.querySelector('.questions__content form');
+  const USER_NAME_FORM = document.querySelector('#name');
+  const PHONE_FORM = document.querySelector('#phone');
+  const QUESTION_FORM = document.querySelector('#question');
+
+  QUESTIONS_FORM.addEventListener('submit', function (evt) {
+    if (window.storage.isSupport) {
+      localStorage.setItem('userName', USER_NAME_FORM.value);
+      localStorage.setItem('phone', PHONE_FORM.value);
+      localStorage.setItem('question', QUESTION_FORM.value);
+    }
+
+    //QUESTIONS_FORM.reset();
+  });
+})();
 /*  eslint no-var: "error"  */
 /*  eslint-env es6  */
 
@@ -120,20 +136,27 @@
     item.classList.remove('footer__title--nojs');
   });
 
-  ACC.forEach(item => {
-    item.addEventListener('click', function () {
-      if (window.innerWidth <= MOBILE_WIDTH_ONLY) {
-        this.classList.toggle('footer__title--active');
-        const content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      }
-    });
-  });
+  const switchVisability = (evt) => {
+    if (window.innerWidth <= MOBILE_WIDTH_ONLY) {
+      const menus = document.querySelectorAll('.footer__title');
+      const menu = evt.target;
+      let isVisible = false;
 
+      isVisible = menu.classList.contains('footer__title--active') ? true : false;
+
+      menus.forEach((item) => {
+        if (item.classList.contains('footer__title--active')) {
+          item.classList.toggle('footer__title--active');
+        }
+      });
+
+      if (!isVisible) {
+        menu.classList.toggle('footer__title--active');
+      }
+    }
+  };
+
+  ACC.forEach((item) => item.addEventListener('click', switchVisability));
 })();
 
 /*  eslint no-var: "error"  */

@@ -24,6 +24,11 @@
   }
 }
 
+.fieldset--popup input {
+  padding-left: 22px;
+  padding-top: 13px;
+}
+
 .fieldset input:hover,
 .fieldset input:focus,
 .fieldset textarea:hover,
@@ -37,9 +42,14 @@
   border: none;
   line-height: 22px;
   color: $white;
+  border-radius: 0;
 
   &::placeholder {
     color: $white;
+  }
+
+  &:required {
+    box-shadow: 0 0 0 0 #009bde;
   }
 }
 
@@ -57,4 +67,8 @@
     height: 82px;
     margin-bottom: 30px;
   }
+}
+
+.fieldset--popup textarea {
+  padding: 16px 22px;
 }

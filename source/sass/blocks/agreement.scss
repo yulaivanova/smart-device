@@ -42,6 +42,10 @@
   cursor: pointer;
 }
 
+.agreement input:focus + label::before {
+  filter: brightness(30%);
+}
+
 .agreement input:checked + .agreement__label::before {
   content: "";
   position: absolute;
@@ -50,4 +54,8 @@
   background-image: url("../img/yes-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.agreement--popup input + label::before {
+  left: -50px;
 }
