@@ -262,6 +262,10 @@
   line-height: 16px;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.2;
+  }
+
   @media (max-width: $tablet-width) {
     display: none;
   }
